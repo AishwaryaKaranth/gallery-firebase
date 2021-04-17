@@ -5,7 +5,7 @@ import {projectStorage} from "../components/firebase_config.js";
 const useStorage=(file)=>{
     const [progress, setProgress]=useState(0);
     const [error, setError]=useState(null);
-    const [url, setUrl]=useState(null);
+    const [url, setUrl]=useState(null); //url here is the image url and this will be stored is firebase
 
 
 useEffect(()=>{
