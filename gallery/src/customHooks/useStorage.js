@@ -1,6 +1,6 @@
 import React from "react";
 import {useState, useEffect} from "react";
-import {projectStorage} from "../components/firebase_config.js";
+import {projectStorage} from "../firebase/firebase_config.js";
 
 const useStorage=(file)=>{
     const [progress, setProgress]=useState(0);
@@ -9,7 +9,7 @@ const useStorage=(file)=>{
 
 
 useEffect(()=>{
-    const storageRef=proejctStorage.ref(file.name)//this references a file inside default firebase bucket.
+    const storageRef=projectStorage.ref(file.name)//this references a file inside default firebase bucket.
     storageRef.put(file).on('state_changed',(snap)=>{
         let percentage=(snap.bytesTransferred/snap.totalBytes)*100;
         setProgress(percentage)

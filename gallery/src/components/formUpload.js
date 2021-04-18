@@ -1,5 +1,6 @@
 import React from "react";
 import {useState} from "react";
+import ProgressBar from "./ProgressBar";
 
 const UploadForm=()=>{
     const [file, setFile]=useState(null);
@@ -9,8 +10,9 @@ const UploadForm=()=>{
         let file=e.target.files[0];
         //console.log(file);
         if(file && validFormat.includes(file.type)){
-            setFile(file);
             setError('');
+            setFile(file);
+            
         }
         else{
             setError("Please select a file of .jpg, .png, .avi, .mp4 format🙂");
@@ -23,6 +25,7 @@ const UploadForm=()=>{
             Upload File<input type="file" onChange={fileHandler}></input>
             {error && <div>{error}</div>}
             {file && <div>{file.name}</div>}
+            {file && <ProgressBar file={file} setFile={setFile}/>}
         </>
     )
 }
