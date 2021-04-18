@@ -15,5 +15,7 @@ var firebaseConfig = {
 
   const projectStorage=firebase.storage();
   const projectFirestore=firebase.firestore();
-
-  export {projectStorage, projectFirestore};
+  const timestamp=firebase.firestore.FieldValue.serverTimestamp;//built in timestamp in firestore.
+  
+  
+  export {projectStorage, projectFirestore, timestamp};
