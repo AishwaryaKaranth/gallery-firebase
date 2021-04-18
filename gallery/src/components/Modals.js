@@ -2,7 +2,9 @@ import React from "react";
 
 const Modals=({select,setSelect})=>{
     const clickHandler=(e)=>{
-        setSelect(null);
+        if(e.target.classList.contains('backdrop')){
+            setSelect(null);
+        }
     }
     return(
         <div className="backdrop" onClick={clickHandler}>
