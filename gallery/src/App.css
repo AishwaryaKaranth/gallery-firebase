@@ -1,9 +1,6 @@
 .App {
   text-align: center;
-  background: #a8ff78;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #78ffd6, #a8ff78);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+  
 }
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
@@ -13,7 +10,7 @@ background: linear-gradient(to right, #78ffd6, #a8ff78); /* W3C, IE 10+/ Edge, F
   --error: #ff4a4a;
 }
 
-/* base styles & title */
+
 body{
   font-family: "Noto Serif";
   color: var(--secondary);
@@ -36,7 +33,7 @@ body{
   font-size: 2.6rem;
 }
 
-/* upload form styles */
+
 form{
   margin: 30px auto 10px;
   text-align: center;
