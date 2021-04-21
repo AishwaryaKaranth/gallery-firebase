@@ -5,7 +5,8 @@ import ProgressBar from "./ProgressBar";
 const UploadForm=()=>{
     const [file, setFile]=useState(null);
     const [error, setError]=useState(null);
-    const validFormat = ['image/png','image/jpg','video/avi','video/mp4','video/mkv']
+    const [like,setLike]=useState(0);
+    const validFormat = ['image/png','image/jpeg','video/avi','video/mp4','video/mkv']
     const fileHandler=(e)=>{
         let file=e.target.files[0];
         //console.log(file);
@@ -30,6 +31,7 @@ const UploadForm=()=>{
             {error && <div>{error}</div>}
             {file && <div>{file.name}</div>}
             {file && <ProgressBar file={file} setFile={setFile}/>}
+            
             </div>
         </form>
     )

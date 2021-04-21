@@ -16,6 +16,6 @@ var firebaseConfig = {
   const projectStorage=firebase.storage();
   const projectFirestore=firebase.firestore();
   const timestamp=firebase.firestore.FieldValue.serverTimestamp;//built in timestamp in firestore.
-  
+  //const like=firebase.firestore.FieldValue.increment(1);
   
   export {projectStorage, projectFirestore, timestamp};
