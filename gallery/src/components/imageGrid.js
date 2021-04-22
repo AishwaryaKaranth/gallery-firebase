@@ -2,7 +2,7 @@ import React from "react";
 import useFirestore from "../customHooks/useFirestore";
 import {motion} from "framer-motion";
 
-const ImageGrid = ({setSelect})=>{
+const ImageGrid = ({setSelect, setLike})=>{  
     const {docs}=useFirestore('images');//'images' is the name of the collection
     return(
         <div className="img-grid">

@@ -5,7 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700&display=swap');
 
 :root{
-  --primary: #efb6b2;
+  --primary:#ce1f6a;
   --secondary: #4e4e4e;
   --error: #ff4a4a;
 }
@@ -13,7 +13,10 @@
 
 body{
   font-family: "Noto Serif";
-  color: var(--secondary);
+  background: #ee9ca7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #ffdde1, #ee9ca7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }
 .App{
   max-width: 960px;
@@ -21,12 +24,13 @@ body{
 }
 .title h1{
   color: var(--primary);
-  font-size: 1.2rem;
+  font-size: 2rem;
   letter-spacing: 2px;
   font-weight: normal;
 }
 .title h2, .title p{
   text-align: center;
+  color:var(--primary)
 }
 .title h2{
   margin-top: 60px;
@@ -67,14 +71,16 @@ label:hover{
   color: var(--error);
 }
 
-/* progress bar styles */
+
 .progress-bar{
   height: 5px;
-  background: var(--primary);
+  background: #c31432;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #240b36, #c31432);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #240b36, #c31432); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   margin-top: 20px;
 }
 
-/* image grid styles */
+
 .img-grid{
   margin: 20px auto;
   display: grid;
